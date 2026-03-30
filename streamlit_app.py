@@ -124,14 +124,14 @@ with m_col2:
         d_c1_pt, d_c6_pt, d_normal_pt = 222, 222, 222
         
     # --- TY（期待獲得枚数）の計算 ---
-    base_ty = 212
+    base_ty = 194
     if "モノクロ" in m_rival_full:
         st.warning("⚠️ モノクロ波多野：最強のB2(1戦目2%) or 艇王")
         d_exp_out = 1022
     elif "青島" in m_rival_full:
         d_exp_out = 1000
     elif "洞口" in m_rival_full:
-        d_exp_out = base_ty + 147
+        d_exp_out = base_ty + 129
     else:
         d_exp_out = base_ty
 
@@ -201,7 +201,7 @@ def calculate_profit(target_ty):
 
 # 2パターンの期待値を算出
 profit_real, rem_g, avg_g = calculate_profit(final_exp_out)
-profit_public, _, _ = calculate_profit(final_exp_out + 273)
+profit_public, _, _ = calculate_profit(final_exp_out + 244)
 
 # --- 7. 結果表示 ---
 st.divider()
@@ -222,7 +222,7 @@ with col_res_b:
         st.success(f"期待収支: ＋{math.floor(profit_public):,} 円")
     else:
         st.error(f"期待収支: {math.floor(profit_public):,} 円")
-    st.caption(f"TY {final_exp_out + 273}枚（公表値バフ込）")
+    st.caption(f"TY {final_exp_out + 244}枚（公表値バフ込）")
 
 st.divider()
 m1, m2, m3 = st.columns(3)
