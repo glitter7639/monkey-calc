@@ -16,7 +16,7 @@ st.components.v1.html(
 
 # --- 2. パスワード認証システム（ここを追加） ---
 # ※ noteで購入したユーザーに伝えるパスワードをここに設定してください
-CORRECT_PASSWORD = "0000" 
+CORRECT_PASSWORD = "7639" 
 
 if "authenticated" not in st.session_state:
     st.session_state.authenticated = False
